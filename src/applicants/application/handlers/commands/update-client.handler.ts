@@ -61,11 +61,13 @@ export class UpdateClientHandler
       name: nameResult.value,
       email: emailResult.value,
       password: passwordResult.value,
+      /*
       mySpecialty: command.mySpecialty,
       myExperience: command.myExperience,
       description: command.description,
       nameGithub: command.nameGithub,
       imgClient: command.imgClient,
+       */
     });
 
     const clientTypeORM = ClientMapper.toTypeORM(client);

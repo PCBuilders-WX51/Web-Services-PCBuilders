@@ -25,12 +25,14 @@ export class SearchClientHandler
       .orWhere('client.last_name like :last_name', {
         last_name: `%${keyword}%`,
       })
+      /*
       .orWhere('client.my_specialty like :my_specialty', {
         my_specialty: `%${keyword}%`,
       })
       .orWhere('client.name_github like :name_github', {
         name_github: `%${keyword}%`,
       })
+       */
       .getMany();
 
     if (ormClients.length <= 0) {
@@ -45,11 +47,13 @@ export class SearchClientHandler
       clientDto.firstName = ormClient.name.firstName;
       clientDto.lastName = ormClient.name.lastName;
       clientDto.email = ormClient.email.value;
+      /*
       clientDto.mySpecialty = ormClient.mySpecialty;
       clientDto.myExperience = ormClient.myExperience;
       clientDto.description = ormClient.description;
       clientDto.nameGithub = ormClient.nameGithub;
       clientDto.imgClient = ormClient.imgClient;
+       */
 
       return clientDto;
     });

@@ -15,13 +15,17 @@ export class GetClientsHandler implements IQueryHandler<GetClientsQuery> {
         id,
         last_name as lastName,
         first_name as firstName,
+        /*
         my_specialty as mySpecialty,
         my_experience as myExperience,
+        */
         description,
         email,
-        password,
+        password
+        /*
         name_github as nameGithub,
         img_client as imgClient
+        */
     FROM
         clients
     ORDER BY
@@ -43,11 +47,13 @@ export class GetClientsHandler implements IQueryHandler<GetClientsQuery> {
       clientDto.lastName = ormClient.lastName;
       clientDto.email = ormClient.email;
       clientDto.password = ormClient.password;
+      /*
       clientDto.mySpecialty = ormClient.mySpecialty;
       clientDto.myExperience = ormClient.myExperience;
       clientDto.description = ormClient.description;
       clientDto.nameGithub = ormClient.nameGithub;
       clientDto.imgClient = ormClient.imgClient;
+       */
 
       return clientDto;
     });

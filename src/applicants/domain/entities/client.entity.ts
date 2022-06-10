@@ -11,33 +11,40 @@ export class Client extends AggregateRoot implements User {
   private name: Name;
   private email: Email;
   private password: Password;
+  /*
   private mySpecialty: string;
   private myExperience: string;
   private description: string;
   private nameGithub: string;
   private imgClient: string;
 
+   */
+
   public constructor(
     id: ClientId,
     name: Name,
     email: Email,
     password: Password,
+    /*
     mySpecialty: string,
     myExperience: string,
     description: string,
     nameGithub: string,
     imgClient: string,
+     */
   ) {
     super();
     this.id = id;
     this.name = name;
     this.email = email;
     this.password = password;
+    /*
     this.mySpecialty = mySpecialty;
     this.myExperience = myExperience;
     this.description = description;
     this.nameGithub = nameGithub;
     this.imgClient = imgClient;
+     */
   }
 
   public register() {
@@ -47,11 +54,13 @@ export class Client extends AggregateRoot implements User {
       this.name.getLastName(),
       this.email.getValue(),
       this.password.getValue(),
+      /*
       this.mySpecialty,
       this.myExperience,
       this.description,
       this.nameGithub,
       this.imgClient,
+       */
     );
     this.apply(event);
   }
@@ -71,7 +80,7 @@ export class Client extends AggregateRoot implements User {
   public getPassword(): Password {
     return this.password;
   }
-
+/*
   public getMySpecialty(): string {
     return this.mySpecialty;
   }
@@ -91,7 +100,7 @@ export class Client extends AggregateRoot implements User {
   public getImgClient(): string {
     return this.imgClient;
   }
-
+*/
   public changeId(id: ClientId) {
     this.id = id;
   }
@@ -107,7 +116,7 @@ export class Client extends AggregateRoot implements User {
   public changePassword(password: Password) {
     this.password = password;
   }
-
+/*
   public changeMySpecialty(mySpecialty: string) {
     this.mySpecialty = mySpecialty;
   }
@@ -126,5 +135,5 @@ export class Client extends AggregateRoot implements User {
 
   public changeImgClient(imgClient: string) {
     this.imgClient = imgClient;
-  }
+  }*/
 }

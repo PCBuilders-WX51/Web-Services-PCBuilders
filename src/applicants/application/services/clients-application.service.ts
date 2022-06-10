@@ -15,8 +15,8 @@ import { UpdateClientRequestDto } from '../dtos/request/update-client-request.dt
 import { UpdateClientResponseDto } from '../dtos/response/update-client-response.dto';
 import { UpdateClientValidator } from '../validators/update-client.validator';
 import { UpdateClientCommand } from '../commands/update-client.command';
-import { GithubApiAdapter } from '../../domain/adapters/github-api/adapter/github-api.adapter';
-import { GithubApi } from '../../domain/adapters/github-api/adaptee/github-api';
+//import { GithubApiAdapter } from '../../domain/adapters/github-api/adapter/github-api.adapter';
+//import { GithubApi } from '../../domain/adapters/github-api/adaptee/github-api';
 
 @Injectable()
 export class ClientsApplicationService {
@@ -49,11 +49,13 @@ export class ClientsApplicationService {
         clientTypeORM.name.lastName,
         clientTypeORM.email.value,
         clientTypeORM.password.value,
+        /*
         clientTypeORM.mySpecialty,
         clientTypeORM.myExperience,
         clientTypeORM.description,
         clientTypeORM.nameGithub,
         clientTypeORM.imgClient,
+         */
       );
 
     return Result.ok(getByIdResponseDto);
@@ -67,7 +69,7 @@ export class ClientsApplicationService {
     if (notification.hasErrors()) {
       return Result.error(notification);
     }
-
+/*
     const getClientByIdQuery: GetClientByIdQuery =
       new GetClientByIdQuery(id);
 
@@ -84,6 +86,7 @@ export class ClientsApplicationService {
       });
 
     return Result.ok(result);
+    */
   }
 
   async register(
@@ -104,11 +107,13 @@ export class ClientsApplicationService {
         registerClientRequestDto.lastName,
         registerClientRequestDto.email,
         registerClientRequestDto.password,
+        /*
         registerClientRequestDto.mySpecialty,
         registerClientRequestDto.myExperience,
         registerClientRequestDto.description,
         registerClientRequestDto.nameGithub,
         registerClientRequestDto.imgClient,
+         */
       );
     const clientId = await this.commandBus.execute(registerClientCommand);
 
@@ -119,11 +124,13 @@ export class ClientsApplicationService {
         registerClientRequestDto.lastName,
         registerClientRequestDto.email,
         registerClientRequestDto.password,
+        /*
         registerClientRequestDto.mySpecialty,
         registerClientRequestDto.myExperience,
         registerClientRequestDto.description,
         registerClientRequestDto.nameGithub,
         registerClientRequestDto.imgClient,
+         */
       );
 
     return Result.ok(registerClientResponseDto);
@@ -151,11 +158,13 @@ export class ClientsApplicationService {
         updateClientRequestDto.lastName,
         updateClientRequestDto.email,
         updateClientRequestDto.password,
+        /*
         updateClientRequestDto.mySpecialty,
         updateClientRequestDto.myExperience,
         updateClientRequestDto.description,
         updateClientRequestDto.nameGithub,
         updateClientRequestDto.imgClient,
+         */
       );
     const clientTypeORM = await this.commandBus.execute(
       updateClientCommand,
@@ -168,11 +177,13 @@ export class ClientsApplicationService {
         clientTypeORM.name.lastName,
         clientTypeORM.email.value,
         clientTypeORM.password.value,
+        /*
         clientTypeORM.mySpecialty,
         clientTypeORM.myExperience,
         clientTypeORM.description,
         clientTypeORM.nameGithub,
         clientTypeORM.imgClient,
+         */
       );
 
     return Result.ok(updateClientResponseDto);
@@ -201,11 +212,13 @@ export class ClientsApplicationService {
         clientTypeORM.name.lastName,
         clientTypeORM.email.value,
         clientTypeORM.password.value,
+        /*
         clientTypeORM.mySpecialty,
         clientTypeORM.myExperience,
         clientTypeORM.description,
         clientTypeORM.nameGithub,
         clientTypeORM.imgClient,
+         */
       );
 
     return Result.ok(deleteClientResponseDto);

@@ -11,11 +11,14 @@ export class ClientFactory extends UserAbstractFactory {
       params.name,
       params.email,
       params.password,
+      /*
       params.mySpecialty,
       params.myExperience,
       params.description,
       params.nameGithub,
       params.imgClient,
+
+       */
     );
   }
 
@@ -25,11 +28,14 @@ export class ClientFactory extends UserAbstractFactory {
       params.name,
       params.email,
       params.password,
+      /*
       params.mySpecialty,
       params.myExperience,
       params.description,
       params.nameGithub,
       params.imgClient,
+
+       */
     );
   }
 }

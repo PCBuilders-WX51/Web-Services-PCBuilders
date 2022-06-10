@@ -11,6 +11,7 @@ export class GetClientsDto {
   public email: string;
   @ApiProperty()
   public password: string;
+  /*
   @ApiProperty()
   public mySpecialty: string;
   @ApiProperty()
@@ -21,4 +22,6 @@ export class GetClientsDto {
   public nameGithub: string;
   @ApiProperty()
   public imgClient: string;
+
+   */
 }

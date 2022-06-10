@@ -39,11 +39,13 @@ export class SearchClientService {
         searchClient.firstName,
         searchClient.lastName,
         searchClient.email,
+        /*
         searchClient.mySpecialty,
         searchClient.myExperience,
         searchClient.description,
         searchClient.nameGithub,
         searchClient.imgClient,
+         */
       );
     });
 

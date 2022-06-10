@@ -38,7 +38,7 @@ export class RegisterClientValidator {
     if (password.length <= 0) {
       notification.addError('Client password is required', null);
     }
-
+/*
     const mySpecialty: string = registerClientRequestDto.mySpecialty.trim();
 
     if (mySpecialty.length <= 0) {
@@ -70,7 +70,7 @@ export class RegisterClientValidator {
     if (imgClient.length <= 0) {
       notification.addError('Client imgClient is required', null);
     }
-
+*/
     if (notification.hasErrors()) {
       return notification;
     }

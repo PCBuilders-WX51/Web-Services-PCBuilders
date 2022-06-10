@@ -5,7 +5,8 @@ import { EmailTypeORM } from '../../../../../common/infrastructure/persistence/t
 import { PasswordTypeORM } from '../../../../../common/infrastructure/persistence/typeorm/entities/password.typeorm';
 
 @Entity('clients')
-@Unique('UQ_client', ['email.value', 'nameGithub'])
+//@Unique('UQ_client', ['email.value', 'nameGithub'])
+@Unique('UQ_client', ['email.value'])
 export class ClientTypeORM {
   @Column((type) => ClientIdTypeORM, { prefix: false })
   public id: ClientIdTypeORM;
@@ -18,7 +19,7 @@ export class ClientTypeORM {
 
   @Column((type) => PasswordTypeORM, { prefix: false })
   public password: PasswordTypeORM;
-
+  /*
   @Column('varchar', { name: 'my_specialty', length: 150, nullable: false })
   public mySpecialty: string;
 
@@ -33,4 +34,5 @@ export class ClientTypeORM {
 
   @Column('varchar', { name: 'img_client', length: 500, nullable: false })
   public imgClient: string;
+   */
 }

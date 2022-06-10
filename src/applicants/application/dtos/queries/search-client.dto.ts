@@ -9,6 +9,7 @@ export class SearchClientDto {
   public lastName: string;
   @ApiProperty()
   public email: string;
+  /*
   @ApiProperty()
   public mySpecialty: string;
   @ApiProperty()
@@ -19,4 +20,6 @@ export class SearchClientDto {
   public nameGithub: string;
   @ApiProperty()
   public imgClient: string;
+
+   */
 }

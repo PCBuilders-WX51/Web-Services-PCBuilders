@@ -17,11 +17,13 @@ export class ClientMapper {
     clientTypeORM.password = EmailTypeORM.from(
       client.getPassword().getValue(),
     );
+    /*
     clientTypeORM.mySpecialty = client.getMySpecialty();
     clientTypeORM.myExperience = client.getMyExperience();
     clientTypeORM.description = client.getDescription();
     clientTypeORM.nameGithub = client.getNameGithub();
     clientTypeORM.imgClient = client.getImgClient();
+     */
 
     return clientTypeORM;
   }
