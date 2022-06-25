@@ -6,8 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('PCBuilders API')
-    .setDescription('PCBuilders API documentation')
+    .setTitle('PCBuilder API')
+    .setDescription('PCBuilder API documentation')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);

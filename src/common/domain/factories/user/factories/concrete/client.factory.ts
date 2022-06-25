@@ -1,5 +1,5 @@
-import { Client } from '../../../../../../applicants/domain/entities/client.entity';
-import { ClientId } from '../../../../../../applicants/domain/value-objects/client-id.value';
+import { Client } from '../../../../../../clients/domain/entities/client.entity';
+import { ClientId } from '../../../../../../clients/domain/value-objects/client-id.value';
 import { UserAbstractFactory } from '../abstract/user-abstract.factory';
 import { CreateFromParams } from '../params/create-from.params';
 import { WithIdParams } from '../params/with-id.params';
@@ -11,14 +11,8 @@ export class ClientFactory extends UserAbstractFactory {
       params.name,
       params.email,
       params.password,
-      /*
-      params.mySpecialty,
-      params.myExperience,
+      params.myLiking,
       params.description,
-      params.nameGithub,
-      params.imgClient,
-
-       */
     );
   }
 
@@ -28,14 +22,8 @@ export class ClientFactory extends UserAbstractFactory {
       params.name,
       params.email,
       params.password,
-      /*
-      params.mySpecialty,
-      params.myExperience,
+      params.myLiking,
       params.description,
-      params.nameGithub,
-      params.imgClient,
-
-       */
     );
   }
 }
